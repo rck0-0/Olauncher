@@ -24,7 +24,20 @@
             app:exitAnim="@anim/fade_exit"
             app:popEnterAnim="@anim/fade_enter"
             app:popExitAnim="@anim/fade_exit" />
+        <action
+            android:id="@+id/action_settingsFragment_to_appBlockerFragment"
+            app:destination="@id/appBlockerFragment"
+            app:enterAnim="@anim/fade_enter"
+            app:exitAnim="@anim/fade_exit"
+            app:popEnterAnim="@anim/fade_enter"
+            app:popExitAnim="@anim/fade_exit" />
     </fragment>
+
+    <fragment
+        android:id="@+id/appBlockerFragment"
+        android:name="app.olauncher.ui.AppBlockerFragment"
+        android:label="AppBlockerFragment"
+        tools:layout="@layout/fragment_app_blocker" />
 
     <fragment
         android:id="@+id/appListFragment"

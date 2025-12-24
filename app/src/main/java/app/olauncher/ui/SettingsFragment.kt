@@ -124,6 +124,10 @@ class SettingsFragment : Fragment(), View.OnClickListener, View.OnLongClickListe
             R.id.closeAccessibility -> toggleAccessibilityVisibility(false)
             R.id.notWorking -> requireContext().openUrl(Constants.URL_DOUBLE_TAP)
 
+            R.id.appBlockerSettings -> {
+                findNavController().navigate(R.id.action_settingsFragment_to_appBlockerFragment)
+            }
+
             R.id.tvGestures -> binding.flSwipeDown.visibility = View.VISIBLE
 
             R.id.maxApps0 -> updateHomeAppsNum(0)
@@ -225,6 +229,9 @@ class SettingsFragment : Fragment(), View.OnClickListener, View.OnLongClickListe
         binding.actionAccessibility.setOnClickListener(this)
         binding.closeAccessibility.setOnClickListener(this)
         binding.notWorking.setOnClickListener(this)
+
+        // Add App Blocker Listener
+        binding.appBlockerSettings.setOnClickListener(this)
 
         binding.share.setOnClickListener(this)
         binding.rate.setOnClickListener(this)
